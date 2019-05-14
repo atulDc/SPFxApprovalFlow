@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "approval-system-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/approvalSystem/ApprovalSystemWebPart.js",
+          "manifest": "./src/webparts/approvalSystem/ApprovalSystemWebPart.manifest.json"
+        }
+      ]
+    },
+    "approval-get-user-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/approvalGetUser/ApprovalGetUserWebPart.js",
+          "manifest": "./src/webparts/approvalGetUser/ApprovalGetUserWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ApprovalSystemWebPartStrings": "lib/webparts/approvalSystem/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "ApprovalGetUserWebPartStrings": "lib/webparts/approvalGetUser/loc/{locale}.js"
+  }
+}
