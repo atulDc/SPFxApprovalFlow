@@ -147,7 +147,7 @@ export default class ApprovalSystem extends React.Component<IApprovalSystemProps
 
   private createItem() {
     let allFilled=this.isAllFilled();
-    var isFairDate=new Date(this.stDate)<new Date(this.endDate);  
+    var isFairDate=new Date(this.stDate)<=new Date(this.endDate);  
     console.log(isFairDate);
     if (allFilled && isFairDate) {
       
