@@ -64,7 +64,7 @@ export default class ApprovalSystem extends React.Component<IApprovalSystemProps
                       context={this.props.pagecontext}
                       titleText="People Picker"
                       personSelectionLimit={1}
-                      groupName={""} // Leave this blank in case you want to filter from all users
+                      groupName={"Manager"} // Leave this blank in case you want to filter from all users
                       showtooltip={true}
                       isRequired={true}
                       disabled={false}
@@ -148,8 +148,9 @@ export default class ApprovalSystem extends React.Component<IApprovalSystemProps
   private createItem() {
     let allFilled=this.isAllFilled();
     var isFairDate=new Date(this.stDate)<=new Date(this.endDate);  
+    var isManagerEmpSame=this.props.currentUserEmail==localStorage.getItem("ManagerEmail")?false:true;
     console.log(isFairDate);
-    if (allFilled && isFairDate) {
+    if (allFilled && isFairDate && isManagerEmpSame) {
       
       let requestdata = {};
       requestdata['Title'] = "title";
@@ -197,7 +198,8 @@ export default class ApprovalSystem extends React.Component<IApprovalSystemProps
         });       
     }
     else {
-      alert("Oops! Looks like mandatory data are not filled or date entered is incorrect... ");
+      
+      alert("Oops! Looks like mandatory data are not filled or  entered is incorrect... ");
     }
 
   }

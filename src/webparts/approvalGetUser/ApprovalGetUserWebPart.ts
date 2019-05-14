@@ -83,6 +83,7 @@ export default class ApprovalGetUserWebPart extends BaseClientSideWebPart<IAppro
     let html: string = '<table border=1 width=100% style="border-collapse: collapse;">';
     html += `<th>Description</th><th>Name</th><th>Reason</th><th>From Date</th><th>To Date</th><th>Status</th><th>Approve/Reject</th>`;
     items.forEach((item: ISPList) => {
+      if(item.EmpName !=this.context.pageContext.user.displayName){
       html += `
           <tr>
               <td>${item.Description}</td>
@@ -116,6 +117,7 @@ export default class ApprovalGetUserWebPart extends BaseClientSideWebPart<IAppro
                 html+=`<p style="color:green;">No action required</p>`;
               }
            html+=`</td></tr>`;
+            }
     });
     html += `</table>`;
 
