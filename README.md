@@ -1,6 +1,7 @@
 ## demo-approval
 
 This is where you include your WebPart documentation.
+This project contains dummy prject for leave approval. Created in SPfx (Sharepoint framework) and office ui fabric.
 
 ### Building the code
 
