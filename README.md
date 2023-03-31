@@ -1,3 +1,3 @@
 ## demo-approval
 
-This is a demo prject for leave approval. Created using SPfx (Sharepoint framework) and office ui fabric.
+This is a POC for leave approval flow. Created using SPfx (Sharepoint framework) and Office UI Fabric.
